@@ -8,6 +8,7 @@ import java.sql.SQLException;
 public class DatabaseInitializer
 {
     public static void initializeTables() {
+        System.out.println("--- INICIANDO SERVLET CONTEXT LISTENER ---");
         String createTableSQL = "CREATE TABLE IF NOT EXISTS users ("
                 + "user_id SERIAL PRIMARY KEY, "
                 + "user_name VARCHAR(100) NOT NULL, "
