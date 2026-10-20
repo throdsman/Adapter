@@ -9,13 +9,15 @@ public class DBConnection
 {
     private static DBConnection conn;
 
-    private String jdbcURL = System.getenv("DB_URL");
-    private String username = System.getenv("DB_USER");
-    private String password = System.getenv("DB_PASS");
+    private String jdbcURL;
+    private String username;
+    private String password;
     
     private DBConnection()
     {
-        // TODO- on Render update credentials
+        jdbcURL = System.getenv("DB_URL");
+        username = System.getenv("DB_USER");
+        password = System.getenv("DB_PASS");
     }
     
     public static DBConnection getInstance()
