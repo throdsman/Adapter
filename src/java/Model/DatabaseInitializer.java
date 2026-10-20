@@ -18,15 +18,16 @@ public class DatabaseInitializer
                 + "user_failed_attempts INT DEFAULT 0, "
                 + "user_lockout_time timestamp"
                 + ");";
-
+        
+        System.out.println("--- INICIANDO SERVLET CONTEXT LISTENER ---");
         try (Connection conn = DBConnection.getInstance().createConnection(); // Your connection method
              Statement stmt = conn.createStatement()) {
             
             stmt.execute(createTableSQL);
-            System.out.println("Database tables verified/created successfully.");
+            System.out.println("--- DB Creado de manera correcta ---");
 
         } catch (Exception e) {
-            System.err.println("Failed to initialize database tables:");
+            System.out.println("--- DB Failed to be created ---");
             e.printStackTrace();
         }
     }
