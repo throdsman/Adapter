@@ -11,8 +11,8 @@ public class UserDB
 {
     public static int add(User user)
     {
-        String sql = "INSERT INTO users(user_name, user_email, user_pass, user_role)"
-                     + "VALUES(?,?,?,?)";
+        String sql = "INSERT INTO users(user_name, user_email, user_pass, user_role, user_age)"
+                     + "VALUES(?,?,?,?,?)";
         
         try
         {
@@ -24,6 +24,7 @@ public class UserDB
             pstmt.setString(2, user.getEmail());
             pstmt.setString(3, user.getPass());
             pstmt.setString(4, user.getRole().name()); 
+            pstmt.setInt(5, user.getAge());
             // if it were to be a loop, just batch it and repeat
             
             int insertedRow = pstmt.executeUpdate();
@@ -39,7 +40,7 @@ public class UserDB
         }
         catch (Exception e)
         {
-            
+            System.out.println(e + "!!!!!!!!!!!!!!!!!!!!");
         }
                 
         return -1;
@@ -81,6 +82,7 @@ public class UserDB
             
             if (!rs.next())
             {
+                System.out.println("User does not EXIST!!!!!");
                 return null;
             }
             

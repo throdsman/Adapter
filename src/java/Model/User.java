@@ -7,15 +7,22 @@ public class User implements DataBaseable
     private String pass;
     private String email;
     private UserRole role;
+    private int age;
     private int id;
 
-    private User(String name, String pass, String email, UserRole role, int id)
+    public int getAge()
+    {
+        return age;
+    }
+
+    private User(String name, String pass, String email, UserRole role, int id, int age)
     {
         this.name = name;
         this.pass = pass;
         this.email = email;
         this.role = role;
         this.id = id;
+        this.age = age;
     }
 
     public String getName()
@@ -54,16 +61,22 @@ public class User implements DataBaseable
         private String pass;
         private String email;
         private UserRole role;
+        private int age;
         private int id;
         
         public User getUser()
         {
-            return new User(name, pass, email, role, id);
+            return new User(name, pass, email, role, id, age);
         }
 
         public void setName(String name)
         {
             this.name = name;
+        }
+
+        public void setAge(int age)
+        {
+            this.age = age;
         }
 
         public void setPass(String pass)

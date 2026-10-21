@@ -60,6 +60,7 @@ public class signup_servlet extends HttpServlet
                     ub.setId(0);
                     ub.setPass(PasswordModifier.SecurePassword(request.getParameter("password")));
                     ub.setRole(UserRole.Basic); // every new user is a basic
+                    ub.setAge(Integer.valueOf(request.getParameter("age")));
                     
                     System.out.println( UserDB.add(ub.getUser()) + " row inserted!!!!!!!!!!!!!!!!!!!!!!");
                     
@@ -67,11 +68,13 @@ public class signup_servlet extends HttpServlet
                     break;
                 }
             }
+            return;
         }
         catch (Exception e)
         {
             System.out.println(e);
             System.out.println("Connection NO!!!!!!!!!!!!!!!!");
+            request.getRequestDispatcher("createAccount.jsp").forward(request, response);
         }
     }
  

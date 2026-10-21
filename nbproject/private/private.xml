@@ -2,18 +2,6 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group>
-            <file>file:/C:/Users/Luis/Documents/NetBeansProjects/Adapter/web/index.jsp</file>
-            <file>file:/C:/Users/Luis/Documents/NetBeansProjects/Adapter/web/WEB-INF/Nice.java</file>
-            <file>file:/C:/Users/Luis/Documents/NetBeansProjects/Adapter/web/WEB-INF/AllDo.java</file>
-            <file>file:/C:/Users/Luis/Documents/NetBeansProjects/Adapter/src/java/Model/DBConnection.java</file>
-            <file>file:/C:/Users/Luis/Documents/NetBeansProjects/Adapter/src/java/Model/User.java</file>
-            <file>file:/C:/Users/Luis/Documents/NetBeansProjects/Adapter/src/java/Control/login_servlet.java</file>
-            <file>file:/C:/Users/Luis/Documents/NetBeansProjects/Adapter/src/java/Control/signup_servlet.java</file>
-            <file>file:/C:/Users/Luis/Documents/NetBeansProjects/Adapter/src/java/Control/register_servlet.java</file>
-            <file>file:/C:/Users/Luis/Documents/NetBeansProjects/Adapter/src/java/Model/PasswordModifier.java</file>
-            <file>file:/C:/Users/Luis/Documents/NetBeansProjects/Adapter/src/java/Model/UserDB.java</file>
-            <file>file:/C:/Users/Luis/Documents/NetBeansProjects/Adapter/src/java/Model/DataBaseable.java</file>
-        </group>
+        <group/>
     </open-files>
 </project-private>

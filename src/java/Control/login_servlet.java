@@ -20,16 +20,16 @@ public class login_servlet extends HttpServlet
         final String pass = request.getParameter("password");
         
         try
-       {
-           User us = UserDB.GetUser(email);
-           if (us == null)
-           {
-               request.setAttribute("errorMessage", "Correo/Contraseña invalido!");
-               request.setAttribute("email", email);
-               request.getRequestDispatcher("index.jsp").forward(request, response);
-           } 
+        {
+            User us = UserDB.GetUser(email);
+            if (us == null)
+            {
+                request.setAttribute("errorMessage", "Correo/Contraseña invalido!");
+                request.setAttribute("email", email);
+                request.getRequestDispatcher("index.jsp").forward(request, response);
+            } 
            
-           String hashed = PasswordModifier.SecurePassword(pass);
+            String hashed = PasswordModifier.SecurePassword(pass);
             
             if (hashed.compareTo(us.getPass()) == 0)
             {
@@ -45,13 +45,15 @@ public class login_servlet extends HttpServlet
                 session.setMaxInactiveInterval(15 * 60); // max 15 min of inactivity
 
                 response.sendRedirect("dashboard.jsp"); 
+                return;
             } 
            
-       }
-       catch (Exception e)
-       {
-               request.getRequestDispatcher("index.jsp").forward(request, response);
-       }
+        }
+        catch (Exception e)
+        {
+             request.getRequestDispatcher("index.jsp").forward(request, response);
+             return;
+        }
     }
  
     @Override

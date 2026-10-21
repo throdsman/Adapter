@@ -7,7 +7,8 @@ import java.sql.SQLException;
 
 public class DatabaseInitializer
 {
-    public static void initializeTables() {
+    public static void initializeTables() 
+    {
         System.out.println("--- INICIANDO SERVLET CONTEXT LISTENER ---");
         String createTableSQL = "CREATE TABLE IF NOT EXISTS users ("
                 + "user_id SERIAL PRIMARY KEY, "
@@ -21,13 +22,17 @@ public class DatabaseInitializer
                 + ");";
         
         System.out.println("--- INICIANDO SERVLET CONTEXT LISTENER ---");
-        try (Connection conn = DBConnection.getInstance().createConnection(); // Your connection method
-             Statement stmt = conn.createStatement()) {
+        try
+        {
+            Connection conn = DBConnection.getInstance().createConnection();
+            Statement stmt = conn.createStatement();
             
             stmt.execute(createTableSQL);
             System.out.println("--- DB Creado de manera correcta ---");
 
-        } catch (Exception e) {
+        }
+        catch (Exception e)
+        {
             System.out.println("--- DB Failed to be created ---");
             e.printStackTrace();
         }
