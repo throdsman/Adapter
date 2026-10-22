@@ -1,4 +1,4 @@
-FROM tomcat:10-jdk17-corretto
+FROM tomcat:10.1.61-jdk21-temurin-noble
 
 RUN rm -rf /usr/local/tomcat/webapps/*
 
