@@ -13,7 +13,7 @@ public class AppInitializer implements ServletContextListener
     public void contextInitialized(ServletContextEvent sce)
     {
         System.out.println("--- Web Application Starting ---");
-        DatabaseInitializer.initializeTables();
+        //DatabaseInitializer.initializeTables();
     }
 
     @Override
