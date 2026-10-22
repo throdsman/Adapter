@@ -60,4 +60,7 @@
         <servlet-name>logout_servlet</servlet-name>
         <url-pattern>/logout_servlet</url-pattern>
     </servlet-mapping>
+    <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+</welcome-file-list>
 </web-app>
